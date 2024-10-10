@@ -34,3 +34,5 @@ Before running the application, ensure you have the following installed on your 
     Maven (for building the project)
     MariaDB (or any other compatible database)
     IDE: Any Java IDE like IntelliJ IDEA or VS Code
+
+Clone the repository
