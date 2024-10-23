@@ -1,5 +1,6 @@
 package com.example.demo;
 
-public interface ProductRepository {
+public interface ProductRepository extends JpaRepository<Product, Long>{
+
 
 }
