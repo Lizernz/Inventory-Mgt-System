@@ -1,17 +1,20 @@
 package com.example.demo.entity;
 
+
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.MappedSuperclass;
+import jakarta.persistence.PrePersist;
+import jakarta.persistence.PreUpdate;
 import java.time.LocalDateTime;
 
 @MappedSuperclass
 
-public abstract class Item {
+public abstract class MainEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Private Long id;
+    private Long id;
     private LocalDateTime createdAt = LocalDateTime.now();
     private LocalDateTime updatedAt = LocalDateTime.now();
 
@@ -28,17 +31,14 @@ public abstract class Item {
         return createdAt;
      }
     public void setCreatedAt ( LocalDateTime CreatedAt) {
-        this.createdAt = createdAt;
+        this.createdAt = CreatedAt;
     }
 
     public LocalDateTime getUpdatedAt() {
         return updatedAt;
      }
     public void setUpdatedAt ( LocalDateTime UpdatedAt) {
-        this.updatedAt = updatedAt;
+        this.updatedAt = UpdatedAt;
     }
-
-
-
 
 }

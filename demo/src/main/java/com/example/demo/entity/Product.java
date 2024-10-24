@@ -1,5 +1,8 @@
 package com.example.demo.entity;
 
+import javax.persistence.Entity;
+import javax.validation.constraints.NotEmpty;
+
 @Entity
 public class Product extends Item{
     @NotEmpty(message = "product name cannot be empty")
