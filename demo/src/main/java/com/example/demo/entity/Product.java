@@ -1,10 +1,12 @@
 package com.example.demo.entity;
 
-import javax.persistence.Entity;
-import javax.validation.constraints.NotEmpty;
+import jakarta.persistence.Entity;
+import jakarta.validation.constraints.NotEmpty;
+
+
 
 @Entity
-public class Product extends Item{
+public class Product extends MainEntity{
     @NotEmpty(message = "product name cannot be empty")
     private String name;
     private double price;

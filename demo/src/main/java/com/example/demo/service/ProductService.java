@@ -1,8 +1,8 @@
 package com.example.demo.service;
 
-import com.example.demo.exception.ProductNotFoundException;
-import com.example.demo.model.Product;
-import com.example.demo.repository.ProductRepository;
+import com.example.demo.service.ProductNotFoundException;
+import com.example.demo.entity.Product;
+import com.example.demo.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
