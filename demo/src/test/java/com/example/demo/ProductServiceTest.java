@@ -11,7 +11,6 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import com.example.demo.entity.Product;
 import com.example.demo.service.ProductNotFoundException;
 import com.example.demo.service.ProductService;
-import com.example.demo.ProductRepository;
 import org.junit.jupiter.api.extension.ExtendWith;
 
 import java.util.Optional;
@@ -23,7 +22,6 @@ public class ProductServiceTest {
     private ProductRepository productRepository;
 
     @InjectMocks
-
     private ProductService productService;
 
     private Product product;
