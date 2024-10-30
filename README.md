@@ -49,6 +49,31 @@ Create a new database in MariaDB:
 CREATE DATABASE Inventorydb;
 
 
+Setting Up the Database
+Create a new database in MariaDB:
+
+sql
+Copy code
+CREATE DATABASE inventory_management;
+Update your application.properties file with your database credentials:
+
+properties
+Copy code
+spring.datasource.url=jdbc:mariadb://localhost:3306/inventory_management
+spring.datasource.username=<your-username>
+spring.datasource.password=<your-password>
+Build the Project
+Navigate to the project directory and run the following command to build the project:
+
+bash
+Copy code
+mvn clean install
+Running the Application
+You can run the application using your IDE or by executing the following command in the terminal:
+
+bash
+Copy code
+mvn spring-boot:run
 
 
 
