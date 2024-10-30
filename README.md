@@ -43,5 +43,6 @@ To get started with the project, clone the repository to your local machine usin
 ```bash
 git clone https://github.com/Lizernz/Inventory-Mgt-System.git
 
-Setting Up the Database
-Create a new database in MariaDB:
+## Setting Up the Database
+### Create a new database in MariaDB:
+CREATE DATABASE inventory_management;
