@@ -64,7 +64,9 @@ spring.datasource.password=<your-password>
 ```bash
 
 mvn clean install
-Running the Application
+
+## Running the Application
+
 You can run the application using your IDE or by executing the following command in the terminal:
 
 ```bash
@@ -99,11 +101,6 @@ Spring Boot
 MariaDB
 JUnit 5
 markdown
-Copy code
 
-### Instructions for Use:
-- Replace `<repository-url>`, `<your-username>`, and `<your-password>` with the actual details.
-- Adjust any section based on your project’s specific needs or additional features you might want to include.
-- Ensure the README is located in the root of your backend project repository for easy access.
 
-This structured approach not only guides users through the setup and usage of your project but also provides them with essential information about its functionality and development processes.
+
