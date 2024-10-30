@@ -43,32 +43,35 @@ To get started with the project, clone the repository to your local machine usin
 ```bash
 git clone <repository-url>
 
-Setting Up the Database
-Create a new database in MariaDB:
+## Setting Up the Database
+### Create a new database in MariaDB:
 
 sql
-Copy code
-CREATE DATABASE inventory_management;
-Update your application.properties file with your database credentials:
 
-properties
-Copy code
+CREATE DATABASE Inventorydb;
+
+## Update your application.properties file with your database credentials:
+
+### properties
+
 spring.datasource.url=jdbc:mariadb://localhost:3306/inventory_management
 spring.datasource.username=<your-username>
 spring.datasource.password=<your-password>
-Build the Project
-Navigate to the project directory and run the following command to build the project:
 
-bash
-Copy code
+## Build the Project
+### Navigate to the project directory and run the following command to build the project:
+
+```bash
+
 mvn clean install
 Running the Application
 You can run the application using your IDE or by executing the following command in the terminal:
 
-bash
-Copy code
+```bash
+
 mvn spring-boot:run
-API Endpoints
+
+## API Endpoints
 The application provides the following RESTful endpoints:
 
 GET /api/products: Retrieve all products
@@ -76,19 +79,22 @@ POST /api/products: Create a new product
 GET /api/products/{id}: Retrieve a product by ID
 PUT /api/products/{id}: Update an existing product
 DELETE /api/products/{id}: Delete a product by ID
-Unit Testing
+
+## Unit Testing
 To run the unit tests, use the following command:
 
-bash
-Copy code
+```bash
+
 mvn test
-Contributing
+
+## Contributing
 Contributions are welcome! Please open an issue or submit a pull request for any enhancements or bug fixes.
 
-License
+## License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-Acknowledgments
+## Acknowledgments
+
 Spring Boot
 MariaDB
 JUnit 5
