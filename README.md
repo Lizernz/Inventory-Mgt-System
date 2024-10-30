@@ -6,24 +6,6 @@ The Inventory Management System (IMS) is a RESTful web application built using S
 
 This system is designed to demonstrate software processes in an agile environment, showcasing important concepts such as REST API design, exception handling, and testing.
 
-Agile Project Plan
-
-1. Goal: Build a robust, scalable inventory management system with CRUD operations (Create, Read, Update, Delete) for products.
-
-2. Sprints:
-
-Sprint 1: Project Setup, Database Design, API Design.
-Sprint 2:  CRUD Operations Implementation, Service Layer.
-Sprint 3: Testing with JUnit 5, Error Handling, and Agile Feedback.
-Sprint 4: Refactoring, Optimization, Documentation, and Final Testing.
-
-3. Tasks:
-
-Sprint 1: Set up Spring Boot application, integrate MariaDB, create the abstract class (base class for entities), and define the Product entity.
-Sprint 2: Implement CRUD operations using Spring Data JPA and REST APIs,Service Layer(Product Service, ProductNotFoundException and Global Exception), Controller Layer(Product Controller).
-Sprint 3: Unit testing using JUnit 5, implement business logic.
-Sprint 4: CORS connecting to the Frontend,Conduct user acceptance testing, optimize code, and prepare for deployment.
-
 Features
 
     CRUD Operations: Create, Read, Update, and Delete products.
