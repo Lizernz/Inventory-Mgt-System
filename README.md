@@ -44,14 +44,9 @@ To get started with the project, clone the repository to your local machine usin
 git clone <repository-url>
 
 Setting Up the Database
-
-1. Create a new database in MariaDB:
-
-sql
+Create a new database in MariaDB:
 
 CREATE DATABASE Inventorydb;
-
-
 
 
 
