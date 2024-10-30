@@ -41,5 +41,5 @@ Before running the application, ensure you have the following installed on your 
 To get started with the project, clone the repository to your local machine using the following command:
 
 ```bash
-git clone <https://github.com/Lizernz/Inventory-Mgt-System.git>
+git clone https://github.com/Lizernz/Inventory-Mgt-System.git
 
