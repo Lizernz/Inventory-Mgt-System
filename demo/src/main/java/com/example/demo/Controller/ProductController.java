@@ -21,12 +21,12 @@ public class ProductController {
         return ResponseEntity.ok(productService.createProduct(product));
     }
 
-    @GetMapping("/{id}") //maps HTTP GET request with a path variable
+    @GetMapping("/{id}") //Maps HTTP GET request with a path variable
     public ResponseEntity<Product> getProduct(@PathVariable Long id) {
         return ResponseEntity.ok(productService.getProduct(id));
     }
 
-    @GetMapping
+    @GetMapping //Maps HTTP GET request without a path variable
     public ResponseEntity<List<Product>> getAllProducts() {
         return ResponseEntity.ok(productService.getAllProducts());
     }
