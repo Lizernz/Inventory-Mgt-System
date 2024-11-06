@@ -21,7 +21,7 @@ public class ProductController {
         return ResponseEntity.ok(productService.createProduct(product));
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/{id}") //maps HTTP GET request with a path variable
     public ResponseEntity<Product> getProduct(@PathVariable Long id) {
         return ResponseEntity.ok(productService.getProduct(id));
     }
@@ -39,7 +39,8 @@ public class ProductController {
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteProduct(@PathVariable Long id) {
         productService.deleteProduct(id);
-        return ResponseEntity.noContent().build();
+        return ResponseEntity.noContent().build(); 
+        //HTTP status 204 No Content, indicating successful deletion.
     }
 }
 

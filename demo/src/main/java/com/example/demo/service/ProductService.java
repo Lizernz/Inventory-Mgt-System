@@ -1,6 +1,6 @@
 package com.example.demo.service;
 
-import com.example.demo.service.ProductNotFoundException;
+
 import com.example.demo.entity.Product;
 import com.example.demo.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
