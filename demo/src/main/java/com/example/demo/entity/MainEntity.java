@@ -7,10 +7,17 @@ import jakarta.persistence.Id;
 import jakarta.persistence.MappedSuperclass;
 import jakarta.persistence.PrePersist;
 import jakarta.persistence.PreUpdate;
+
+import lombok.Getter;
+import lombok.Setter;
+
 import java.time.LocalDateTime;
 
-@MappedSuperclass
 
+
+@MappedSuperclass
+@Getter
+@Setter
 public abstract class MainEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -30,27 +37,4 @@ public abstract class MainEntity {
         updatedAt = LocalDateTime.now();
     }
     
-    //Getters and Setters
-
-    public Long getId() {
-        return  id;
-    }
-     public void setId(Long id) {
-        this.id = id;
-     }
-
-     public LocalDateTime getCreatedAt() {
-        return createdAt;
-     }
-    public void setCreatedAt ( LocalDateTime CreatedAt) {
-        this.createdAt = CreatedAt;
-    }
-
-    public LocalDateTime getUpdatedAt() {
-        return updatedAt;
-     }
-    public void setUpdatedAt ( LocalDateTime UpdatedAt) {
-        this.updatedAt = UpdatedAt;
-    }
-
 }
