@@ -5,7 +5,6 @@ import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.security.Keys;
 
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import java.util.Date;
@@ -13,21 +12,21 @@ import java.util.Date;
 @Component
 public class JwtTokenUtil {
 
-    @Value("${jwt.secret}")
-    private String jwtSecret;
+    private final JwtProperties jwtProperties;
 
-    @Value("${jwt.expiration}")
-    private long jwtExpiration;
+    
+    public JwtTokenUtil(JwtProperties jwtProperties) {
+        this.jwtProperties = jwtProperties;
+    }
 
     // Generate a JWT token
     public String generateToken(String username) {
-        // Use Keys.secretKeyFor() to generate a secure key
-        var key = Keys.hmacShaKeyFor(jwtSecret.getBytes());
+        var key = Keys.hmacShaKeyFor(jwtProperties.getSecret().getBytes());
 
         return Jwts.builder()
                 .setSubject(username)
                 .setIssuedAt(new Date())
-                .setExpiration(new Date(System.currentTimeMillis() + jwtExpiration))
+                .setExpiration(new Date(System.currentTimeMillis() + jwtProperties.getExpiration()))
                 .signWith(key, SignatureAlgorithm.HS512)
                 .compact();
     }
@@ -35,8 +34,7 @@ public class JwtTokenUtil {
     // Validate the token
     public boolean validateToken(String token) {
         try {
-            // Use Keys.hmacShaKeyFor() to generate a secure key for validation
-            var key = Keys.hmacShaKeyFor(jwtSecret.getBytes());
+            var key = Keys.hmacShaKeyFor(jwtProperties.getSecret().getBytes());
             Jwts.parserBuilder()
                 .setSigningKey(key)
                 .build()
@@ -49,8 +47,7 @@ public class JwtTokenUtil {
 
     // Get the username from the token
     public String getUsernameFromToken(String token) {
-        // Use Keys.hmacShaKeyFor() to generate a secure key for extracting claims
-        var key = Keys.hmacShaKeyFor(jwtSecret.getBytes());
+        var key = Keys.hmacShaKeyFor(jwtProperties.getSecret().getBytes());
         Claims claims = Jwts.parserBuilder()
                             .setSigningKey(key)
                             .build()
@@ -59,4 +56,3 @@ public class JwtTokenUtil {
         return claims.getSubject();
     }
 }
-
