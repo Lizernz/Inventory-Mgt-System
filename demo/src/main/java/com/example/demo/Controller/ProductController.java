@@ -10,7 +10,7 @@ import com.example.demo.service.ProductService;
 
 @RestController
 @RequestMapping("/api/stock")
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "http://localhost:3000", allowCredentials = "true")
 public class ProductController {
 
     @Autowired
