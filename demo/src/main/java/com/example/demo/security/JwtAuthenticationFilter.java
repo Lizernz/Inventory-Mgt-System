@@ -1,3 +1,4 @@
+
 package com.example.demo.security;
 
 import jakarta.servlet.FilterChain;
@@ -13,6 +14,7 @@ import org.springframework.security.core.context.SecurityContextHolder;
 
 import java.io.IOException;
 import java.util.ArrayList;
+
 
 public class JwtAuthenticationFilter extends UsernamePasswordAuthenticationFilter {
 
@@ -71,5 +73,3 @@ protected void successfulAuthentication(HttpServletRequest request, HttpServletR
     chain.doFilter(request, response);
 }
 }
-
-   
